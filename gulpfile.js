@@ -9,7 +9,7 @@ var babel = require('gulp-babel');
 var concat = require('gulp-concat');
 var sourcemaps = require('gulp-sourcemaps');
 var imagemin = require('gulp-imagemin');
-var sitePort = 8092;
+var sitePort = 8094;
 // Browser Sync
 
 // ConCat
@@ -127,7 +127,7 @@ gulp.task('watch', function() {
     gulp.watch('src/templates/**/*.pug', ['pug']);
     gulp.watch('src/scripts/**/*.js', ['js']);
     gulp.watch('src/fonts/**/*', ['fonts']);
-    gulp.watch('src/**/*', ['img']);
+    gulp.watch('src/img/**/*', ['img']);
     gulp.watch('dist/*.html').on('change', browserSync.reload);
 }).on('end', browserSync.reload);
 
