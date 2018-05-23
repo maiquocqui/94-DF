@@ -1,0 +1,33 @@
+.breadcrumb-wrap
+	+pos(rel,null)
+	.breadcrumb-img
+		img
+			width: 100%
+			+media-breakpoint-down(lg)
+				height: 200px
+				object-fit: cover
+	.breadcrumb-content
+		+pos(abs, null 0 0 0)
+		background: color-rgba($black,0.3)
+	ol.breadcrumb
+		background: none
+		margin: 0
+		padding: 15px 0
+		+bor-rad(0)
+		+flexbox
+		flex-wrap: wrap
+		align-items: center
+		li
+			a
+				display: block
+				+fs(14rem)
+				line-height: 20px
+				color: $white
+				&:before
+					content: '\f105'
+					line-height: 1
+					margin: 0px 10px
+			&:first-child
+				a
+					&:before
+						display: none

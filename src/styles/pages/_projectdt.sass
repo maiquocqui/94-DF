@@ -1,0 +1,138 @@
+.project-page
+	.project-video
+		iframe
+			+media-breakpoint-down(md)
+				height: 400px
+			+media-breakpoint-down(sm)
+				height: 350px
+			+media-breakpoint-down(xs)
+				height: 250px
+	.project-album
+		display: inline-block
+		+bor-rad(50px)
+		padding: 5px 20px
+		+fs(12rem)
+		line-height: 20px
+		font-weight: 600
+		text-transform: uppercase
+		color: $main
+		background: darken($white,6%)
+		margin-bottom: 20px
+	.project-img
+		margin-bottom: 20px
+		.img
+			display: block
+			+pos(rel,null)
+			overflow: hidden
+			margin-bottom: 20px
+			&:before
+				content: '\f03e'
+				+fs(24rem)
+				color: $white
+				+flexbox
+				justify-content: center
+				align-items: center
+				+pos(abs, 0 null 0 0)
+				right: 0
+				background: color-rgba($black,0.25)
+				z-index: 3
+				+transition(all,0.5s)
+			img
+				width: 100%
+				+transition(all,10s)
+			&:hover
+				img
+					+transform(scale3d(1.2,1.2,1))
+				&:before
+					opacity: 0
+	.project-form
+		.module-title
+			@extend .page-title
+			text-align: center
+	.form-wrap
+	.form-group
+		+pos(rel,null)
+		label
+			display: none
+		.fa.fa-exclamation-triangle
+			+fs(0)
+			color: $red
+			+pos(abs,0.9375rem 1.5rem null null)
+			&:before
+				+fs(14rem)
+				font-family: 'fontawesome'
+	input, textarea
+		@extend .form-control
+		+fs(13rem)
+		font-weight: 500
+		color: darken($white,60%)
+		line-height: 16px
+		padding: 0.9375rem 1.5rem
+		background: color-rgba($white,0.8)
+		+bor-rad(3px)
+		border: none
+		&:focus
+			box-shadow: 0 0 0 0.2rem color-rgba($orange,0.5)
+	textarea
+		min-height: 200px
+	.frm-btn
+		text-align: center
+	input[type="submit"]
+		background: $orange
+		+fs(14rem)
+		line-height: 16px
+		font-weight: 600
+		color: $white
+		+bor-rad(3px)
+		padding: 0.9375rem 3rem
+		width: auto
+		text-transform: uppercase
+		display: inline-block
+.project-section1
+	@extend .project-page
+	padding-top: 20px
+	background: url(../img/project/bg1.png) center bottom no-repeat
+	// background-size: 100% auto
+	.project-content
+		background: darken($white,4%)
+		.project-img
+			height: 100%
+			margin-bottom: 0
+			img
+				width: 100%
+				margin-bottom: 0
+				+media-breakpoint-down(lg)
+					height: 100%
+					object-fit: cover
+		.content
+			padding: 30px 20px
+			margin-bottom: 0
+.project-section2
+	@extend .project-page
+.project-section3
+	background: url(../img/bg.jpg) center center repeat
+	padding: 0
+	.project-content
+		@extend .project-page
+		&:nth-child(even)
+			background: $white
+	.project-img
+		.img
+			+ .img
+				margin-top: 20px
+.project-section4
+	@extend .project-page
+	background: url(../img/bg.jpg) center center repeat
+.project-section5
+	@extend .project-page
+	text-align: center
+.project-section6
+	@extend .project-page
+	background: url(../img/project/bg2.jpg) center center no-repeat
+	background-size: cover
+.project-section7
+	@extend .project-page
+.project-section8
+	@extend .project-page
+.project-section9
+	@extend .project-page
