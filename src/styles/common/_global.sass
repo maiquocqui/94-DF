@@ -4,8 +4,8 @@ body
 	font-family: 'Nunito Sans', sans-serif
 	font-size: 16px
 	line-height: 1.5
-	background: $white
-	width: 100%
+	background: url(../img/bg.jpg) center center repeat
+	color: $white
 	*
 		line-height: inherit
 html
@@ -13,7 +13,6 @@ html
 
 .fullpage
 	max-width: 1920px
-	background: $white
 	margin: 0 auto
 	overflow: hidden
 	// box-shadow: 0px 0px 20px color-rgba($black,0.1)
@@ -123,6 +122,8 @@ main
 	color: $orange
 .text-red
 	color: $red
+.text-yellow
+	color: $yellow
 
 .row
 	margin: 0px -10px
@@ -197,5 +198,5 @@ img, iframe
 	+fw(600)
 .text-700
 	+fw(700)
-.text-900
-	+fw(900)
+.text-800
+	font-weight: 800 !important

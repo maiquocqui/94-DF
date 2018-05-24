@@ -2,9 +2,9 @@
 
 $(document).ready(function () {
     // header script
-    $('header').scrollToFixed({
-        zIndex: 1000
-    });
+    // $('header').scrollToFixed({
+    //     zIndex: 1000,
+    // });
 
     if ($(window).width() < 1200) {}
 
