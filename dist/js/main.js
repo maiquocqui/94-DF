@@ -19,6 +19,13 @@ $(document).ready(function () {
 
     $(window).bind('scroll', function () {
         if ($(window).scrollTop() > 100) {
+            $('header').addClass('hide', 'minimal');
+        } else {
+            $('header').removeClass('hide', 'minimal');
+        }
+    });
+    $(window).bind('scroll', function () {
+        if ($(window).scrollTop() > 200) {
             $('header').addClass('minimal');
         } else {
             $('header').removeClass('minimal');
@@ -67,32 +74,13 @@ $(document).ready(function () {
         // autoplaySpeed: 5000,
     });
 
-    // Award slide
-    $('.award-slide').slick({
-        slidesToShow: 3,
-        slidesToScroll: 3,
+    // Project slide
+    $('.project-slide').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
         arrows: true,
-        dots: true,
-        infinite: true,
-        responsive: [{
-            breakpoint: 1199,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3
-            }
-        }, {
-            breakpoint: 991,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-            }
-        }, {
-            breakpoint: 767,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }]
+        dots: false,
+        infinite: true
     });
 
     // Gallery slide

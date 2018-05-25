@@ -2,17 +2,34 @@
 	+fs(40rem)
 	line-height: 1.3
 	font-weight: 300
-	margin-bottom: 20px
+	margin-bottom: 30px
+	padding-left: 10px
+	+pos(rel,null)
+	&:before
+		content: ''
+		width: 1px
+		height: 80px
+		background: $yellow
+		+pos(abs, -60px null null 0)
 	span
 		font-weight: 300
 		margin-left: 70px
 		display: block
+
+.small-title
+	+fs(30rem)
+	font-weight: 300
+	text-transform: uppercase
+	color: $white
+	margin-bottom: 30px
 
 .home-about
 	padding: 60px 0
 	background: $white
 	.home-title
 		color: $main
+		&:before
+			background: $main
 	.about-content
 		.content
 			+fs(18rem)
@@ -21,46 +38,6 @@
 
 .home-project
 	padding: 60px 0
-.project-list
-	margin-bottom: 25px
-	.row
-		margin: 0px -2px
-		.col-12
-			padding: 0px 2px
-	.project-item
-		display: block
-		margin-bottom: 4px
-		+pos(rel,null)
-		overflow: hidden
-		&:before
-			content: ''
-			+pos(abs, 66.66% 0 0 0)
-			background: linear-gradient(color-rgba($black,0),color-rgba($black,1))
-			opacity: 0.5
-			z-index: 2
-			+transition(all,0.5s)
-		figure
-			.project-img
-				width: 100%
-				height: 295px
-				+transition(all,10s)
-			figcaption
-				.project-name
-					+fs(16rem)
-					text-transform: uppercase
-					color: $white
-					+pos(abs, null 30px 20px 30px)
-					z-index: 3
-		&.big
-			figure
-				.project-img
-					height: 594px
-		&:hover
-			&:before
-				opacity: 0.8
-			figure
-				.project-img
-					+transform(scale3d(1.2,1.2,1))
 .home-intro
 	.title-wrap
 		+flexbox

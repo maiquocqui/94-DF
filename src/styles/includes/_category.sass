@@ -1,13 +1,9 @@
 .page-tab
-	margin: 0 0 30px
+	margin: 0 0 20px
 	padding: 0
-	background: none
+	background: darken($white,80%)
 	border: none
 	+bor-rad(0)
-	+flexbox
-	justify-content: center
-	align-items: center
-	align-content: center
 	+media-breakpoint-down(lg)
 		display: block
 		text-align: center
@@ -28,27 +24,23 @@
 			+bor-rad(50px)
 			border: none
 			margin: 0
-			padding: 5px 20px
-			+fs(12rem)
+			padding: 15px 40px
+			+fs(18rem)
 			line-height: 20px
-			font-weight: 600
-			text-transform: uppercase
-			color: $main
-			background: darken($white,6%)
+			font-weight: 300
+			color: darken($white,40%)
+			background: none
 			+transition(all,0.3s)
 			&:hover
-				color: $orange
+				color: $yellow
 			&.active, &.mPS2id-highlight
-				background: $orange
-				color: $white
+				color: $yellow
 		&.active
 			a, .nav-link
-				background: $orange
-				color: $white
+				color: $yellow
 
 .top-nav
 	padding: 20px 0
 	.home-tab
 		padding: 10px 15px
 		margin: 0
-		background: $white
