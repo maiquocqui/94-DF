@@ -48,19 +48,40 @@
 						font-weight: 300
 						color: darken($white,40%)
 .service-form
+	margin-bottom: 80px
 	.content
 		+fs(20rem)
 		font-weight: 300
 		color: darken($white,40%)
+		margin-bottom: 50px
 		.title
 			+fs(36rem)
 			font-weight: 800
 			color: $yellow
 			text-transform: uppercase
+			margin: 20px 0
 			span
 				display: block
+				+fs(48rem)
 				text-align: right
 				color: $white
 				font-weight: 800
+				padding-right: 150px
 	.form-wrap
+	.module-title
+		+fs(24rem)
+		font-weight: 700
+		text-transform: uppercase
+		color: $white
+		margin-bottom: 10px
 	.form-img
+		+pos(rel,null)
+		display: block
+		&:before
+			content: ''
+			+pos(abs, 50px 0 -50px 50px)
+			border: 10px solid color-rgba($white,0.1)
+		img
+			width: calc(100% - 50px)
+			+pos(rel,null)
+			z-index: 1

@@ -34,6 +34,34 @@
 			border-color: $yellow !important
 			background: darken($yellow,10%) !important
 			color: $main !important
+
+// FORM INIT
+.form-wrap
+	.form-group
+		margin-bottom: 10px
+		input, textarea
+			@extend .form-control
+			background: darken($white,80%)
+			width: 100%
+			+bor-rad(5px)
+			line-height: 20px
+			+fs(18rem)
+			color: $white
+			padding: 0.625rem 1.25rem
+			border: none
+			font-family: 'Nunito Sans', sans-serif
+			&:active, &:focus
+				background: darken($white,70%)
+				color: $white
+				border-color: $yellow
+				box-shadow: 0 0 0 0.2rem color-rgba($yellow,0.5)
+	.frm-btn
+		padding: 10px 5px 0
+	input[type="submit"]
+		@extend .btn.btn-primary
+		line-height: 40px
+		font-weight: 300
+		padding: 0px 50px
 // FORM COMPONENTS
 
 .checkbox
