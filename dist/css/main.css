@@ -7466,14 +7466,16 @@ input[type="reset"] {
     line-height: 20px;
     font-size: 1.125rem;
     color: #fff;
-    padding: 0.625rem 1.25rem;
+    padding: 0.9375rem 1.25rem;
     border: none;
     font-family: 'Nunito Sans', sans-serif; }
     .form-wrap .form-group input:active, .form-wrap .form-group input:focus, .form-wrap .form-group textarea:active, .form-wrap .form-group textarea:focus {
-      background: #4d4d4d;
+      background: #333333;
       color: #fff;
       border-color: #fec53a;
       box-shadow: 0 0 0 0.2rem rgba(254, 197, 58, 0.5); }
+  .form-wrap .form-group textarea {
+    min-height: 120px; }
 
 .form-wrap .frm-btn {
   padding: 10px 5px 0; }
@@ -7779,12 +7781,43 @@ header {
     padding-left: 15px;
     margin-left: 15px;
     border-left: 1px solid #fff;
-    line-height: 1; }
+    line-height: 1;
+    position: relative; }
     header .search .search-toggle {
       color: #fff;
-      line-height: 1; }
+      line-height: 1;
+      cursor: pointer; }
+      header .search .search-toggle.active {
+        color: #fec53a; }
     header .search .search-wrap {
+      position: absolute;
+      top: 40px;
+      right: 0;
       display: none; }
+      header .search .search-wrap .searchbox {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        border-radius: 3px;
+        background: #333333;
+        color: #999999; }
+        header .search .search-wrap .searchbox input {
+          border: none;
+          background: none;
+          font-size: 1rem;
+          line-height: 20px;
+          color: #fff;
+          padding: 15px 20px;
+          flex: auto; }
+        header .search .search-wrap .searchbox .searchbutton {
+          color: #fff;
+          color: #999999;
+          line-height: 20px;
+          padding: 15px 20px; }
 
 .home-banner .slick-prev, .home-banner .slick-next {
   position: absolute;
@@ -8057,6 +8090,15 @@ footer {
     font-weight: 300;
     margin-left: 70px;
     display: block; }
+
+.page-title {
+  font-size: 1.875rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #fff;
+  border-bottom: 2px solid #fec53a;
+  padding: 5px 0;
+  margin-bottom: 30px; }
 
 .small-title {
   font-size: 1.875rem;
@@ -8514,5 +8556,154 @@ footer {
         color: #fff; }
     .news-page .news-list .news-col figure:hover figcaption .news-name {
       color: #fec53a; }
+
+.news-detail .content {
+  font-size: 1.25rem;
+  font-weight: 300; }
+
+.partner-page {
+  padding: 60px 0; }
+  .partner-page .partner-list .partner-logo {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 210px;
+    background: #fff;
+    margin-bottom: 30px; }
+    .partner-page .partner-list .partner-logo img {
+      max-width: 60%;
+      max-height: 60%; }
+
+.gallery-page {
+  padding: 60px 0; }
+
+.career-page {
+  padding: 60px 0; }
+  .career-page .career-table th, .career-page .career-table td {
+    text-align: center; }
+    .career-page .career-table th:first-child, .career-page .career-table td:first-child {
+      text-align: left; }
+  .career-page .career-table th {
+    background: #050505;
+    color: #fec53a;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 20px;
+    padding: 20px; }
+  .career-page .career-table td {
+    font-size: 1.25rem;
+    line-height: 20px;
+    padding: 20px;
+    font-weight: 300;
+    color: #999999; }
+    .career-page .career-table td .job-wrap {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      align-items: center;
+      align-content: center; }
+    .career-page .career-table td .number {
+      font-size: 1.5rem;
+      line-height: 20px;
+      font-weight: 800;
+      margin-right: 20px; }
+    .career-page .career-table td a {
+      line-height: 20px; }
+    .career-page .career-table td:hover {
+      color: #fec53a; }
+      .career-page .career-table td:hover a {
+        font-weight: 700; }
+  .career-page .career-table tr:nth-child(odd) {
+    background: #333333; }
+  .career-page .career-detail time {
+    font-size: 1.125rem;
+    font-weight: 300;
+    color: #999999;
+    display: block;
+    margin-top: -30px;
+    margin-bottom: 30px; }
+    .career-page .career-detail time:before {
+      content: '\f073';
+      margin-right: 5px; }
+  .career-page .content {
+    font-size: 1.25rem; }
+  .career-page .btn-download {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #ef3331;
+    display: block;
+    margin-bottom: 20px; }
+    .career-page .btn-download:before {
+      content: '\f019';
+      margin-right: 10px;
+      font-size: 1.5rem;
+      display: inline-block;
+      vertical-align: middle; }
+  .career-page .btn-apply:after {
+    display: none; }
+
+.other-job {
+  padding: 60px 0; }
+  .other-job .module-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fec53a;
+    background: #666666;
+    padding: 15px 30px;
+    line-height: 20px; }
+  .other-job .job-list .job {
+    padding: 10px 30px;
+    border-bottom: 1px solid #333333; }
+    .other-job .job-list .job time {
+      display: block;
+      font-size: 0.875rem;
+      line-height: 1;
+      font-weight: 300;
+      color: #999999;
+      margin-bottom: 10px; }
+      .other-job .job-list .job time:before {
+        content: '\f073';
+        margin-right: 5px; }
+    .other-job .job-list .job .job-name {
+      font-size: 1.125rem;
+      font-weight: 300;
+      color: #999999; }
+    .other-job .job-list .job:hover .job-name {
+      color: #fec53a; }
+
+.contact-page {
+  padding: 60px 0; }
+  .contact-page .contact-form {
+    margin-bottom: 40px; }
+  .contact-page .contact-info {
+    color: #333333;
+    padding: 30px 60px;
+    min-height: 280px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    background: #fec53a url(../img/contactbg.png) bottom right no-repeat; }
+    .contact-page .contact-info .title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 20px; }
+    .contact-page .contact-info ul li {
+      padding-left: 30px;
+      position: relative;
+      font-size: 1.125rem;
+      font-weight: 300; }
+      .contact-page .contact-info ul li .fa {
+        position: absolute;
+        top: 5px;
+        left: 0; }
 
 /*# sourceMappingURL=main.css.map */

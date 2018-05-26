@@ -66,8 +66,33 @@ header
 		margin-left: 15px
 		border-left: 1px solid $white
 		line-height: 1
+		+pos(rel,null)
 		.search-toggle
 			color: $white
 			line-height: 1
+			cursor: pointer
+			&.active
+				color: $yellow
 		.search-wrap
+			+pos(abs, 40px 0 null null)
 			display: none
+			.searchbox
+				+flexbox
+				align-items: center
+				align-content: center
+				+bor-rad(3px)
+				background: darken($white,80%)
+				color: darken($white,40%)
+				input
+					border: none
+					background: none
+					+fs(16rem)
+					line-height: 20px
+					color: $white
+					padding: 15px 20px
+					flex: auto
+				.searchbutton
+					color: $white
+					color: darken($white,40%)
+					line-height: 20px
+					padding: 15px 20px

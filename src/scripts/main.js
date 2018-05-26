@@ -30,6 +30,11 @@ $(document).ready(function() {
         }
     });
 
+    $('.search-toggle').click(function() {
+        $(this).toggleClass('active');
+        $('.search-wrap').fadeToggle(300);
+    })
+
     // BANNER
     $('.banner').slick({
         slidesToShow: 1,
