@@ -25,6 +25,8 @@
 				content: ''
 				font-family: 'Linearicons-Free'
 				+fs(42rem)
+				+media-breakpoint-down(md)
+					+fs(24rem)
 		.slick-prev
 			left: 20px
 			&:before
@@ -46,6 +48,11 @@
 		background: darken($white,80%)
 		padding: 20px 30px
 		height: 100%
+		+media-breakpoint-down(md)
+			height: auto
+			margin-bottom: 15px
+		+media-breakpoint-down(sm)
+			padding: 15px 20px
 		.project-name
 			+fs(24rem)
 			font-weight: 600
@@ -64,6 +71,8 @@
 		.content
 			padding: 20px
 			color: $white
+			+media-breakpoint-down(md)
+				padding: 0
 
 .project-list
 	margin-bottom: 25px
@@ -88,6 +97,8 @@
 				width: 100%
 				height: 295px
 				+transition(all,10s)
+				+media-breakpoint-down(lg)
+					height: 225px
 			figcaption
 				.project-name
 					+fs(16rem)
@@ -95,10 +106,20 @@
 					color: $white
 					+pos(abs, null 30px 20px 30px)
 					z-index: 5
+					+media-breakpoint-down(lg)
+						left: 20px
+						right: 20px
+						bottom: 15px
 		&.big
 			figure
 				.project-img
 					height: 594px
+					+media-breakpoint-down(lg)
+						height: 454px
+					+media-breakpoint-down(md)
+						height: 400px
+					+media-breakpoint-down(sm)
+						height: 225px
 		&:hover
 			&:before
 				opacity: 0.8

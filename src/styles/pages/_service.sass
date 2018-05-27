@@ -3,39 +3,62 @@
 	.service-list
 		.service-item
 			margin-bottom: 130px
-			&:nth-child(even)
-				figure
-					.service-img
-						order: 2
-					figcaption
-						order: 1
-						padding-left: 0
-						padding-right: 70px
+			+media-breakpoint-up(lg)
+				&:nth-child(even)
+					figure
+						.service-img
+							order: 2
+						figcaption
+							order: 1
+							padding-left: 0
+							padding-right: 70px
+							+media-breakpoint-down(lg)
+								padding-right: 15px
+			+media-breakpoint-down(lg)
+				margin-bottom: 80px
 			figure
 				+flexbox
 				align-items: center
 				align-content: center
+				margin: 0px -15px
+				+media-breakpoint-down(lg)
+					flex-wrap: wrap
 				.service-img
-					width: 970px
 					+pos(rel,null)
 					display: block
+					+media-breakpoint-down(md)
+						margin-bottom: 60px
 					&:before
 						content: ''
-						+pos(abs, 50px 0 -50px 50px)
+						+pos(abs, 50px 15px -50px 50px)
 						border: 10px solid color-rgba($white,0.1)
+						+media-breakpoint-down(lg)
+							top: 30px
+							bottom: -30px
+							left: 30px
 					img
 						width: calc(100% - 50px)
 						+pos(rel,null)
 						z-index: 1
+						+media-breakpoint-down(lg)
+							width: calc(100% - 30px)
 				figcaption
 					width: calc(100% - 970px)
 					padding-left: 70px
+					+media-breakpoint-down(lg)
+						padding-left: 15px
 					.service-name
 						+fs(30rem)
 						font-weight: 600
 						text-transform: uppercase
 						color: $white
 						margin-bottom: 30px
+						+media-breakpoint-down(lg)
+							+fs(28rem)
+						+media-breakpoint-down(md)
+							+fs(24rem)
+						+media-breakpoint-down(sm)
+							+fs(18rem)
 						&:after
 							content: ''
 							display: block
@@ -47,6 +70,12 @@
 						+fs(20rem)
 						font-weight: 300
 						color: darken($white,40%)
+						+media-breakpoint-down(lg)
+							+fs(18rem)
+						+media-breakpoint-down(md)
+							+fs(16rem)
+						+media-breakpoint-down(sm)
+							+fs(14rem)
 .service-form
 	margin-bottom: 80px
 	.content
@@ -54,20 +83,46 @@
 		font-weight: 300
 		color: darken($white,40%)
 		margin-bottom: 50px
+		+media-breakpoint-down(lg)
+			+fs(18rem)
+			margin-bottom: 30px
+		+media-breakpoint-down(md)
+			+fs(16rem)
+		+media-breakpoint-down(sm)
+			+fs(14rem)
 		.title
 			+fs(36rem)
 			font-weight: 800
 			color: $yellow
 			text-transform: uppercase
 			margin: 20px 0
+			+media-breakpoint-down(lg)
+				+fs(32rem)
+			+media-breakpoint-down(md)
+				+fs(28rem)
+			+media-breakpoint-down(sm)
+				+fs(24rem)
+			+media-breakpoint-down(xs)
+				+fs(18rem)
 			span
 				display: block
 				+fs(48rem)
 				text-align: right
 				color: $white
 				font-weight: 800
-				padding-right: 150px
+				padding-right: 10%
+				+media-breakpoint-down(lg)
+					+fs(36rem)
+					padding-right: 0
+				+media-breakpoint-down(md)
+					+fs(32rem)
+				+media-breakpoint-down(sm)
+					+fs(28rem)
+				+media-breakpoint-down(xs)
+					+fs(24rem)
 	.form-wrap
+		+media-breakpoint-down(md)
+			margin-bottom: 40px
 	.module-title
 		+fs(24rem)
 		font-weight: 700
@@ -77,11 +132,20 @@
 	.form-img
 		+pos(rel,null)
 		display: block
+		+media-breakpoint-down(md)
+			max-width: 400px
+			margin: 0 auto
 		&:before
 			content: ''
 			+pos(abs, 50px 0 -50px 50px)
 			border: 10px solid color-rgba($white,0.1)
+			+media-breakpoint-down(lg)
+				top: 30px
+				bottom: -30px
+				left: 30px
 		img
 			width: calc(100% - 50px)
 			+pos(rel,null)
 			z-index: 1
+			+media-breakpoint-down(lg)
+				width: calc(100% - 30px)

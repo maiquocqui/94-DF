@@ -60,29 +60,37 @@
 			// 	opacity: 0.1
 			// 	z-index: 1
 			img
+				+media-breakpoint-down(md)
+					height: 350px
+					object-fit: cover
 				+media-breakpoint-down(sm)
 					height: 250px
-					object-fit: cover
 		.banner-caption
 			+fs(44rem)
 			font-weight: 300
 			color: $white
 			text-align: center
 			+pos(abs, null 0 70px 0)
+			padding: 0px 15px
 			z-index: 2
 			text-shadow: 0px 3px 20px color-rgba($black,0.3)
 			+media-breakpoint-down(lg)
-				width: 800px
+				// width: 800px
 				+fs(20rem)
 			+media-breakpoint-down(md)
-				width: 600px
+				// width: 600px
 				+fs(18rem)
 			+media-breakpoint-down(sm)
-				width: 100%
-				padding: 0px 15px
+				// width: 100%
+				// padding: 0px 15px
 				+fs(16rem)
 
 .page-banner
 	.banner-img
 		img
 			width: 100%
+			+media-breakpoint-down(md)
+				height: 280px
+				object-fit: cover
+			+media-breakpoint-down(sm)
+				height: 200px

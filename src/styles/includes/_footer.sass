@@ -1,9 +1,14 @@
 footer
 	background: $lblack
+	+media-breakpoint-down(md)
+		text-align: center
 	.footer-top
 		padding: 50px 0 20px
 	.footer-col
 		margin-bottom: 30px
+	.footer-logo
+		+media-breakpoint-down(md)
+			text-align: center
 	.footer-title
 		+fs(18rem)
 		font-weight: 600
@@ -17,6 +22,8 @@ footer
 			height: 1px
 			margin-top: 5px
 			background: $yellow
+			+media-breakpoint-down(md)
+				margin: 5px auto 0
 	.footer-link
 		a
 			display: block
@@ -34,9 +41,14 @@ footer
 				color: darken($white,20%)
 				+pos(rel,null)
 				padding-left: 30px
+				+media-breakpoint-down(md)
+					padding-left: 0
 				.fa
 					color: $yellow
 					+pos(abs, 5px null null 0)
+					+media-breakpoint-down(md)
+						+pos(static,null)
+						margin-right: 10px
 				a
 					&:hover
 						color: $yellow
@@ -46,14 +58,24 @@ footer
 		align-items: center
 		height: 50px
 		border-top: 1px solid color-rgba($white,0.1)
+		+media-breakpoint-down(md)
+			flex-wrap: wrap
+			height: auto
+			padding: 15px 0
 		.copyright
 			+fs(12rem)
 			color: color-rgba($white,0.3)
 			text-transform: uppercase
+			+media-breakpoint-down(md)
+				width: 100%
+				margin-bottom: 5px
 		.social
 			+flexbox
 			align-items: center
 			align-content: center
+			+media-breakpoint-down(md)
+				width: 100%
+				justify-content: center
 			a
 				color: color-rgba($white,0.3)
 				+fs(18rem)

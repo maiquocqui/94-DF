@@ -4,6 +4,10 @@
 	.content
 		+fs(20rem)
 		font-weight: 300
+		+media-breakpoint-down(md)
+			+fs(16rem)
+		+media-breakpoint-down(sm)
+			+fs(14rem)
 	.about-img
 		+pos(rel,null)
 		&:before
@@ -75,6 +79,14 @@
 		margin: 0 auto 20px
 		+pos(rel,null)
 		z-index: 3
+		+media-breakpoint-down(lg)
+			+fs(32rem)
+		+media-breakpoint-down(md)
+			+fs(28rem)
+		+media-breakpoint-down(sm)
+			+fs(24rem)
+		+media-breakpoint-down(xs)
+			+fs(18rem)
 	.btn
 		+pos(rel,null)
 		z-index: 3

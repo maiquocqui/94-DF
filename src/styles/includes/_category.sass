@@ -19,7 +19,7 @@
 		+media-breakpoint-down(lg)
 			display: inline-block
 		+ li, + .nav-item
-			margin-left: 10px
+			margin-left: 0px
 		a, .nav-link
 			+bor-rad(50px)
 			border: none
@@ -31,6 +31,8 @@
 			color: darken($white,40%)
 			background: none
 			+transition(all,0.3s)
+			+media-breakpoint-down(md)
+				padding: 15px 30px
 			&:hover
 				color: $yellow
 			&.active, &.mPS2id-highlight

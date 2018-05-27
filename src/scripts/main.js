@@ -7,12 +7,14 @@ $(document).ready(function() {
     if ($(window).width() < 1200) {}
 
     $('.btn-showmenu').click(function() {
-        $('.menu').addClass('open');
-        $('.overlay').fadeIn(500);
+        $('.menu').toggleClass('open');
+        $('.overlay').fadeToggle(500);
+        $(this).toggleClass('active');
     })
     $('.overlay').click(function() {
         $(this).fadeOut(500);
         $('.menu').removeClass('open');
+        $('.btn-showmenu').removeClass('active');
     })
 
     $(window).bind('scroll', function() {
