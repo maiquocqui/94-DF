@@ -8046,7 +8046,8 @@ header {
         font-size: 1.125rem; } }
     @media (max-width: 767.98px) {
       .home-banner .item .banner-caption {
-        font-size: 1rem; } }
+        font-size: 1rem;
+        bottom: 40px; } }
 
 .page-banner .banner-img img {
   width: 100%; }
@@ -8552,16 +8553,6 @@ footer {
 
 .project-page {
   padding: 60px 0; }
-  .project-page .project-list .project-item figure figcaption:before {
-    content: '';
-    width: 93px;
-    height: 80px;
-    background: url(../img/logo.png) center center no-repeat;
-    background-size: cover;
-    position: absolute;
-    right: 25px;
-    bottom: 15px;
-    z-index: 3; }
   .project-page .project-slide {
     margin-bottom: 20px; }
     .project-page .project-slide .slick-prev, .project-page .project-slide .slick-next {
