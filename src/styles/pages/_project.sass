@@ -95,13 +95,13 @@
 		figure
 			.project-img
 				width: 100%
-				height: 295px
-				+transition(all,10s)
+				height: 250px
 				+media-breakpoint-down(lg)
 					height: 225px
 			figcaption
 				.project-name
 					+fs(16rem)
+					line-height: 1.3
 					text-transform: uppercase
 					color: $white
 					+pos(abs, null 30px 20px 30px)
@@ -113,7 +113,7 @@
 		&.big
 			figure
 				.project-img
-					height: 594px
+					height: 504px
 					+media-breakpoint-down(lg)
 						height: 454px
 					+media-breakpoint-down(md)
@@ -125,4 +125,5 @@
 				opacity: 0.8
 			figure
 				.project-img
+					+transition(all,10s)
 					+transform(scale3d(1.2,1.2,1))

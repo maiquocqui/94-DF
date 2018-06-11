@@ -6,6 +6,11 @@ header
 	background: $black
 	+pos(abs, 0 0 null 0)
 	z-index: 1000
+	.container
+		+media-breakpoint-up(xl)
+			max-width: 1640px
+			width: 100%
+			padding: 0px 30px
 	+media-breakpoint-up(xl)
 		&.hide
 			+pos(fix, 0 0 null 0)
@@ -92,12 +97,12 @@ header
 				+media-breakpoint-down(lg)
 					width: 100%
 				+ li
-					margin-left: 50px
+					margin-left: 45px
 					+media-breakpoint-down(lg)
 						margin-left: 0
 				> a
 					display: block
-					+fs(16rem)
+					+fs(15rem)
 					font-weight: 600
 					color: $white
 					line-height: 20px
