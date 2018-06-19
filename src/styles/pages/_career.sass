@@ -1,24 +1,44 @@
 .career-page
 	padding: 60px 0
 	.career-table
+		overflow: auto
+		table
+			// min-width: 1000px
 		th, td
 			text-align: center
+			+media-breakpoint-down(md)
+				padding: 10px
 			&:first-child
 				text-align: left
+				+media-breakpoint-down(sm)
+					width: 80%
+			&:nth-child(3), &:nth-child(4)
+				+media-breakpoint-down(md)
+					display: none
 		th
 			background: $black
 			color: $yellow
 			+fs(20rem)
 			font-weight: 600
+			vertical-align: middle
 			text-transform: uppercase
 			line-height: 20px
 			padding: 20px
+			+media-breakpoint-down(md)
+				+fs(14rem)
+				padding: 10px
+			&:nth-child(2)
+				+media-breakpoint-down(sm)
+					+fs(0)
 		td
 			+fs(20rem)
 			line-height: 20px
 			padding: 20px
 			font-weight: 300
 			color: darken($white,40%)
+			+media-breakpoint-down(md)
+				+fs(14rem)
+				padding: 10px
 			.job-wrap
 				+flexbox
 				align-items: center
@@ -28,6 +48,8 @@
 				line-height: 20px
 				font-weight: 800
 				margin-right: 20px
+				+media-breakpoint-down(sm)
+					display: none
 			a
 				line-height: 20px
 			&:hover
